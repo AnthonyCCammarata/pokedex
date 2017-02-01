@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Pokedex</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_settings">Filters</string>
+
+    <!--Search Page-->
+    <string name="refresh_button">Refresh</string>
+    <string name="search_button">Search</string>
+    <string name="search_hint">Search criteria...</string>
+    <string name="filter_button">Filter</string>
+
+    <!--Preferences -->
+    <string name="set_default_filter">Set your default filter</string>
+    <string name="click_set_default_filter">Click here to set your default filter</string>
+    <string-array name="sort_type">
+        <item>Name</item>
+        <item>Number</item>
+        <item>Type</item>
+        <item>Favourites</item>
+    </string-array>
+    <string name="set_type_filter">Set your Pokemon type filter</string>
+    <string name="click_set_type_filter">Click here to set your Pokemon type filter</string>
+    <string-array name="types">
+        <item>Normal</item>
+        <item>Fight</item>
+        <item>Flying</item>
+        <item>Poison</item>
+        <item>Ground</item>
+        <item>Rock</item>
+        <item>Bug</item>
+        <item>Ghost</item>
+        <item>Steel</item>
+        <item>Fire</item>
+        <item>Water</item>
+        <item>Grass</item>
+        <item>Electric</item>
+        <item>Psychic</item>
+        <item>Ice</item>
+        <item>Dragon</item>
+        <item>Dark</item>
+        <item>Fairy</item>
+    </string-array>
+
+    <!--Details Page-->
+    <string name="number_label">Num - </string>
+    <string name="name_label">Name </string>
+    <string name="blurb">Blurb</string>
+    <string name="type_label">Type: </string>
+
+    <string name="height_label">Height: </string>
+    <string name="weight_label">Weight: </string>
+    <string name="description_label">Description: </string>
+    <string name="battle_cry_button">Battle Cry</string>
+
+    <string name="unfavourated">Unfavourated</string>
+    <string name="favourited">Favourited</string>
+
+    <string name="loading">Loading...</string>
+
+    <string name="wr_error_save">Error saving!</string>
+    <string name="error_csv">Error loading initial data!</string>
+    <string name="no_found">No Pokemon Found</string>
+
+</resources>

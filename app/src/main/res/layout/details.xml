@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#b32525">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="10"
+        android:columnCount="5">
+
+        <!--Gif Display-->
+        <RelativeLayout android:id="@+id/imageholder"
+            android:layout_width="185dp"
+            android:layout_height="185dp"
+            android:background="#b32525"
+            android:layout_row="1"
+            android:layout_rowSpan="5"
+            android:layout_column="0"
+            android:layout_columnSpan="2">
+        <WebView android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            />
+        </RelativeLayout>
+
+        <!--Sound-->
+        <Button android:id="@+id/sound_button"
+            android:onClick="squeal"
+            android:text="@string/battle_cry_button"
+            android:textSize="25dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="6"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="2"/>
+
+        <!--ID-->
+        <TextView android:id="@+id/number_content"
+            android:text="@string/number_label"
+            style="@style/DetailsLabels"
+            android:textSize="35sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"/>
+
+        <!--Name-->
+        <TextView android:id="@+id/name_content"
+            android:text="@string/name_label"
+            style="@style/DetailsLabels"
+            android:textSize="35sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_rowSpan="1"
+            android:layout_column="1"
+            android:layout_columnSpan="4"/>
+
+        <!--Blurb-->
+        <TextView android:id="@+id/blurb_content"
+            android:text="@string/blurb"
+            style="@style/DetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="1"
+            android:layout_rowSpan="1"
+            android:layout_column="2"
+            android:layout_columnSpan="3"/>
+
+        <!--Type-->
+        <TextView android:id="@+id/type_label"
+            android:text="@string/type_label"
+            style="@style/DetailsLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowSpan="1"
+            android:layout_column="2"
+            android:layout_columnSpan="1"/>
+    
+        <TextView android:id="@+id/type_content_1"
+            android:text="@string/type_label"
+            style="@style/DetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="2"
+            android:layout_rowSpan="1"
+            android:layout_column="3"
+            android:layout_columnSpan="1"/>
+
+        <TextView android:id="@+id/type_content_2"
+            android:text="@string/type_label"
+            style="@style/DetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="3"
+            android:layout_rowSpan="1"
+            android:layout_column="3"
+            android:layout_columnSpan="1"/>
+
+        <!--Height-->
+        <TextView android:id="@+id/height_label"
+            android:text="@string/height_label"
+            style="@style/DetailsLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+            android:layout_column="2"
+            android:layout_columnSpan="1"/>
+    
+        <TextView android:id="@+id/height_content"
+            android:text="@string/height_label"
+            style="@style/DetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="4"
+            android:layout_rowSpan="1"
+            android:layout_column="3"
+            android:layout_columnSpan="1"/>
+
+        <!--Weight-->
+        <TextView android:id="@+id/weight_label"
+            android:text="@string/weight_label"
+            style="@style/DetailsLabels"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_rowSpan="1"
+            android:layout_column="2"
+            android:layout_columnSpan="1"/>
+    
+        <TextView android:id="@+id/weight_content"
+            android:text="@string/weight_label"
+            style="@style/DetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="5"
+            android:layout_rowSpan="1"
+            android:layout_column="3"
+            android:layout_columnSpan="1"/>
+
+        <!--Description-->
+        <TextView android:id="@+id/description_label"
+            android:text="@string/description_label"
+            style="@style/DetailsLabels"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="7"
+            android:layout_rowSpan="1"
+            android:layout_column="0"
+            android:layout_columnSpan="1"/>
+    
+        <TextView android:id="@+id/description_content"
+            android:text="@string/description_label"
+            style="@style/DetailsData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_row="8"
+            android:layout_rowSpan="2"
+            android:layout_column="0"
+            android:layout_columnSpan="4"/>
+    </GridLayout>
+
+
+    <!--Favourite Button-->
+    <!--http://stackoverflow.com/questions/15116393/fit-image-in-imagebutton-in-android-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageButton android:id="@+id/favourite_button"
+            android:onClick="favourite"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    </LinearLayout>
+
+    <!--Progress Bar-->
+    <RelativeLayout android:id="@+id/load_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@color/black_overlay"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="64sp"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/loading"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

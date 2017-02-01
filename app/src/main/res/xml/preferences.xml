@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ListPreference
+        android:key="filter_type"
+        android:title="@string/set_default_filter"
+        android:summary="@string/click_set_default_filter"
+        android:entries="@array/sort_type"
+        android:entryValues="@array/sort_type"
+        android:defaultValue="Number"/>
+
+    <ListPreference
+        android:key="pokemon_type_filter"
+        android:title="@string/set_type_filter"
+        android:summary="@string/click_set_type_filter"
+        android:entries="@array/types"
+        android:entryValues="@array/types"
+        android:defaultValue="Normal"/>
+
+
+</PreferenceScreen>
