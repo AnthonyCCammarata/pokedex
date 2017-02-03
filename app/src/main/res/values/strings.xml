@@ -4,7 +4,7 @@
     <string name="title_settings">Filters</string>
 
     <!--Search Page-->
-    <string name="refresh_button">Refresh</string>
+    <string name="clear_filters_button">Clear Filters</string>
     <string name="search_button">Search</string>
     <string name="search_hint">Search criteria...</string>
     <string name="filter_button">Filter</string>

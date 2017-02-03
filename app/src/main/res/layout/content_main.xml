@@ -12,31 +12,11 @@
     tools:showIn="@layout/activity_main"
     tools:context=".MainActivity">
 
-    <Button android:id="@+id/filter_button"
-        android:onClick="loadSettings"
-        android:text="@string/filter_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button android:id="@+id/search_button"
-        android:onClick="searchPokemon"
-        android:text="@string/search_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"/>
-
-    <Button android:id="@+id/refresh_button"
-        android:onClick="refreshList"
-        android:text="@string/refresh_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"/>
 
     <!-- db contents -->
     <ScrollView android:id="@+id/scroll_data"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/filter_button"
         android:fadeScrollbars="false">
 
         <LinearLayout android:id="@+id/db_contents"

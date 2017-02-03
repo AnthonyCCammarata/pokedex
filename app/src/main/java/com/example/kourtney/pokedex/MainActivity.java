@@ -184,12 +184,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         }
-        Button b = (Button) findViewById( R.id.filter_button );
-        b.setEnabled( tog );
-        b = (Button) findViewById( R.id.refresh_button );
-        b.setEnabled( tog );
-        b = (Button) findViewById( R.id.search_button );
-        b.setEnabled(tog);
+
     }
 
     private void loadEntry( View v ) {
@@ -198,23 +193,7 @@ public class MainActivity extends AppCompatActivity {
         loadPokemon(v);
     }
 
-    public void searchPokemon( View v ) {
-        toggleButtons(false);
-        removeButtons();
-        loadLayout.setVisibility(LinearLayout.VISIBLE);
-        if ( mFilterBy == 1 ) { // All Pokemon, number ordered
-            new FilterNormal().execute();
-        }
-        else if ( mFilterBy == 0 ) { // Alpha
-            new FilterAlpha().execute();
-        }
-        else if ( mFilterBy == 2 ) { // Type
-            new FilterType().execute();
-        }
-        else { // Favs
-            new FilterByFavs().execute();
-        }
-    }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -232,6 +211,36 @@ public class MainActivity extends AppCompatActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            return true;
+        }
+        if (id == R.id.filter_button){
+            startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
+            return true;
+        }
+        if (id == R.id.clear_filters_button){
+            toggleButtons( false );
+            removeButtons();
+            loadLayout.setVisibility( LinearLayout.VISIBLE );
+            MainActivity.RefreshAsync ra = new MainActivity.RefreshAsync();
+            ra.execute( this );
+            return true;
+        }
+        if (id == R.id.search_button){
+            toggleButtons(false);
+            removeButtons();
+            loadLayout.setVisibility(LinearLayout.VISIBLE);
+            if ( mFilterBy == 1 ) { // All Pokemon, number ordered
+                new FilterNormal().execute();
+            }
+            else if ( mFilterBy == 0 ) { // Alpha
+                new FilterAlpha().execute();
+            }
+            else if ( mFilterBy == 2 ) { // Type
+                new FilterType().execute();
+            }
+            else { // Favs
+                new FilterByFavs().execute();
+            }
             return true;
         }
 
@@ -368,13 +377,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void refreshList( View v ) {
-        toggleButtons( false );
-        removeButtons();
-        loadLayout.setVisibility( LinearLayout.VISIBLE );
-        RefreshAsync ra = new RefreshAsync();
-        ra.execute( this );
-    }
+
 
     private class EntryLoad extends AsyncTask< Void, Integer, Integer > {
         protected Integer doInBackground( Void... unused ) {
@@ -526,10 +529,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //KOURTNEY/////////////////////////////////////////////////////////////////////////////////////////////////////////
-    /** handler for settings button */
-    public void loadSettings(View v){
-        startActivity(new Intent(getApplicationContext(),SettingsActivity.class));
-    }
+
 
     public void loadPokemon(View v){
         Intent i = new Intent(getApplicationContext(), DexView.class );

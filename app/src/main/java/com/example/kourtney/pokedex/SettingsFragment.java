@@ -2,6 +2,8 @@ package com.example.kourtney.pokedex;
 
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
+import android.view.View;
+import android.widget.LinearLayout;
 
 /**
  * Created by Kourtney on 11/26/2015.
